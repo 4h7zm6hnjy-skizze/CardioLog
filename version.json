@@ -1,0 +1,5 @@
+{
+  "version": "1.0.2",
+  "released": "2026-10-21",
+  "notes": "Robustere Datumsprüfung, Monatsnavigation in Diagrammen und Import-Validierung; CardioLog-Name und iPhone-Installation."
+}
