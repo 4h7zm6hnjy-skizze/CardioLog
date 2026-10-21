@@ -1,5 +1,5 @@
 /* CardioLog service worker. Change VERSION with each deployment. */
-const VERSION='1.0.2';
+const VERSION='1.0.3';
 const CACHE='cardiolog-'+VERSION;
 const CORE=['./','./index.html','./styles.css','./app.js','./version.json','./manifest.webmanifest','./icon.svg','./apple-icon.png','./icon-512.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE))));

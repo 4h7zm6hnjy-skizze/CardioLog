@@ -1,6 +1,6 @@
 # CardioLog – Blutdruck, Puls und Gewicht
 
-Version **1.0.2**, Stand 21.10.2026.
+Version **1.0.3**, Stand 21.10.2026.
 
 ## Einrichtung als iPhone-Webapp
 
@@ -35,6 +35,17 @@ Messwerte liegen im **lokalen Browser-Speicher (localStorage)** auf dem jeweilig
 
 Bei jeder aktualisierten Veröffentlichung die Version in `app.js`, `version.json`, `sw.js`, `index.html` sowie die Cache-Version des Service Workers konsistent anheben. Im selben HTTPS-Pfad veröffentlichen, damit die bestehende installierte App das Update finden kann. Alte **PulsPilot**-Browserdaten werden einmalig eingelesen, wenn noch keine CardioLog-Daten vorhanden sind und derselbe Browser-Ursprung benutzt wird.
 
-## Geprüfte Funktionen in Version 1.0.2
+## Geprüfte Funktionen in Version 1.0.3
 
 Messwerterfassung, Editieren/Löschen, Grenzwertwarnungen, Zeitraumauswahl, Medikamentenformular, Berichte, JSON-Export und iPhone-kompakte Browseransicht wurden automatisiert in Chromium geprüft. Die tatsächliche Installation und der Safari-Druckdialog müssen auf einem iPhone gesondert getestet werden.
+
+## Neu in 1.0.3
+
+- Feste iPhone-Darstellung: Deaktivierung des Pinch-/Doppeltipp-Zooms und Verhinderung des automatischen Safari-Fokuszooms durch ausreichend große Eingabeschrift. Hinweis: Das Einschränken der Bildschirmlupe/Zoomfunktion kann die Bedienbarkeit für Menschen mit Sehbeeinträchtigung vermindern.
+- Nebenwirkungen zu Bisoprolol, Hydrochlorothiazid, Ramipril und Citalopram werden für erkannte Wirkstoffe automatisch angezeigt. Auswahl, keine vollständigen Beipackzettel.
+- Bei Hinzufügen, Bearbeiten und Löschen eines Medikaments werden bekannte Kombinationen aus diesen vier Wirkstoffen neu bewertet. Aktuell vier quellenbasierte Paarhinweise.
+- Unbekannte Namen/Wirkstoffe ausdrücklich „nicht geprüft“; keine Entwarnung aus fehlenden Treffern. Persönliche Hinweise zu Neben- und Wechselwirkungen bearbeitbar, separat als ungeprüft gekennzeichnet.
+- PDF/Druckbericht enthält Nebenwirkungen, bekannte Interaktionen und Quellenlinks (bei Onlineverbindung).
+- Die Offline-Datenbank kann nur durch neue App-Versionen erweitert werden: eine vollständige laufende Aktualisierung oder personalisierte medizinische Interaktionsprüfung ist nicht vorhanden.
+
+Verwendete Quellen: Zentiva BisoLich https://www.zentiva.de/produkte/produktkatalog/bisolich; HCT 1A Pharma https://www.apotheken-umschau.de/medikamente/beipackzettel/hct-1a-pharma-125-mg-tabletten-6453151.html; Ramipril https://www.patienteninfo-service.de/a-z-liste/r/ramipril-1a-pharma-5mg-tabletten; Citalopram-Fachinfo https://www.patienteninfo-service.de/a-z-liste/c/citalopram-hexal-20mg-filmtabletten; Kombinationen https://www.fachinfo.de/fi/pdf/004419 und https://www.patienteninfo-service.de/a-z-liste/r/ramipril-hexal-comp-5mg125mg-tabletten.
